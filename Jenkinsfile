@@ -25,9 +25,3 @@ pipeline{
     }
 }
 
-
-
-
-
-docker rm -f $(docker ps -a -q)
-docker build -t 
