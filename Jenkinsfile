@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("cleanup"){
             steps{
-               sh "docker rm -f $(docker ps -a -q) || true"
+               sh "docker rm -f \$(docker ps -a -q) || true"
                sh "docker network create new-network || true" 
             }
         }
