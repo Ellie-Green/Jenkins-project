@@ -21,7 +21,7 @@ pipeline{
         }
         stage("security scan"){
             steps{
-                sh "trivy fs /Jenkins-project"
+                sh "trivy "
             }
         }
 
