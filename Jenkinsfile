@@ -19,6 +19,11 @@ pipeline{
                 sh "docker run -d -p 80:80 --name nginx-container --network new-network nginx-image"
             }
         }
+        stage("security scan"){
+            steps{
+                sh "trivy fs /Jenkins-project"
+            }
+        }
 
 
 
