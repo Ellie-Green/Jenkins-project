@@ -21,7 +21,7 @@ pipeline{
         }
         stage("security scan"){
             steps{
-                sh "trivy "
+                sh "trivy fs -f json -o scanresults.json ."
             }
         }
 
